@@ -20,6 +20,10 @@ class ShoppingCart {
   getItems(){
     return [...this.#cartItems];
   }
+
+  removeItem(id) {
+    this.#cartItems.splice(this.#cartItems.findIndex((item) => item.id === id), 1);
+  }
 }
 
 export default ShoppingCart;
