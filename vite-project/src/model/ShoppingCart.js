@@ -3,7 +3,7 @@ import CartItem from "./CartItem";
 
 class ShoppingCart {
   // initially thought it should be [...CartItem]
-  #cartItems = [CartItem];
+  #cartItems = [];
   
   constructor(id) {
     id = getId();
@@ -15,6 +15,10 @@ class ShoppingCart {
     const newItem = new CartItem(this.name, this.price);
     this.#cartItems.push(newItem);
     return newItem;
+  }
+
+  getItems(){
+    return [...this.#cartItems];
   }
 }
 
