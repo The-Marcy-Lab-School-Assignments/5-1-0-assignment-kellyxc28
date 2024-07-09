@@ -12,7 +12,7 @@ class ShoppingCart {
   }
 
   createItem() {
-    const newItem = new CartItem(this.name, this.price, this.id);
+    const newItem = new CartItem(this.name, this.price);
     this.#cartItems.push(newItem);
     return newItem;
   }
