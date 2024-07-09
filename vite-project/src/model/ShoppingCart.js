@@ -10,6 +10,12 @@ class ShoppingCart {
     this.id = id;
     this.#cartItems;
   }
+
+  createItem() {
+    const newItem = new CartItem(this.name, this.price, this.id);
+    this.#cartItems.push(newItem);
+    return newItem;
+  }
 }
 
 export default ShoppingCart;
