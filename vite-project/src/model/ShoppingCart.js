@@ -6,9 +6,8 @@ class ShoppingCart {
   #cartItems = [];
   // static #allCarts = [];
   
-  constructor(id) {
-    id = getId();
-    this.id = id;
+  constructor() {
+    this.id = getId();
     this.#cartItems;
   }
 
