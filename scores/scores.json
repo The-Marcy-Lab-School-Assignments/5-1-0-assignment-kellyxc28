@@ -7,7 +7,7 @@
     },
     "ShoppingCart Tests": {
       "ShTe1": 1,
-      "ShTe2": 0,
+      "ShTe2": 1,
       "ShTe3": 1,
       "ShTe4": 1,
       "ShTe5": 1,
@@ -71,7 +71,7 @@
   },
   "humanReadable": {
     "CartItem Tests": "3/3",
-    "finalTestScore": "FINAL SCORE: 10/15",
-    "ShoppingCart Tests": "7/12"
+    "finalTestScore": "FINAL SCORE: 11/15",
+    "ShoppingCart Tests": "8/12"
   }
 }

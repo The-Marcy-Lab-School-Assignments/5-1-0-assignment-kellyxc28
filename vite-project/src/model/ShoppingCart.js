@@ -28,7 +28,7 @@ class ShoppingCart {
 
   getTotal(){
     return this.#cartItems.reduce((accum, {price}) => accum + price, 0);
-  }s
+  }
 }
 
 export default ShoppingCart;
