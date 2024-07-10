@@ -4,6 +4,7 @@ import CartItem from "./CartItem";
 class ShoppingCart {
   // initially thought it should be [...CartItem]
   #cartItems = [];
+  // static #allCarts = [];
   
   constructor(id) {
     id = getId();
@@ -11,8 +12,8 @@ class ShoppingCart {
     this.#cartItems;
   }
 
-  createItem() {
-    const newItem = new CartItem(this.name, this.price);
+  createItem(name, price) {
+    const newItem = new CartItem(name, price);
     this.#cartItems.push(newItem);
     return newItem;
   }
@@ -25,9 +26,9 @@ class ShoppingCart {
     this.#cartItems.splice(this.#cartItems.findIndex((item) => item.id === id), 1);
   }
 
-  getTotal(){
-    return this.#cartItems.reduce((accum, {price}) => accum + price);
-  }
+  // getTotal(){
+  //   return this.#cartItems.reduce((accum, price) => accum + price);
+  // }
 }
 
 export default ShoppingCart;
