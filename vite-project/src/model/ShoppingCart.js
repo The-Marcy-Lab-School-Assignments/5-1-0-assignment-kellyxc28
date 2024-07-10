@@ -24,6 +24,10 @@ class ShoppingCart {
   removeItem(id) {
     this.#cartItems.splice(this.#cartItems.findIndex((item) => item.id === id), 1);
   }
+
+  getTotal(){
+    return this.#cartItems.reduce((accum, {price}) => accum + price);
+  }
 }
 
 export default ShoppingCart;
