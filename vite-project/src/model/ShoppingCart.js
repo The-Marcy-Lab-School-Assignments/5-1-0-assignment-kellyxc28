@@ -4,11 +4,13 @@ import CartItem from "./CartItem";
 class ShoppingCart {
   // initially thought it should be [...CartItem]
   #cartItems = [];
-  // static #allCarts = [];
+  static #allCarts = [];
   
   constructor() {
     this.id = getId();
     this.#cartItems;
+
+    ShoppingCart.#allCarts.push(this);
   }
 
   createItem(name, price) {
@@ -27,6 +29,14 @@ class ShoppingCart {
 
   getTotal(){
     return this.#cartItems.reduce((accum, {price}) => accum + price, 0);
+  }
+
+  static listAll() {
+    return [...ShoppingCart.#allCarts];
+  }
+
+  static findBy(id) {
+    return ShoppingCart.#allCarts.find((cart) => cart.id === id);
   }
 }
 
