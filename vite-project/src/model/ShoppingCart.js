@@ -1,6 +1,6 @@
 import getId from "../utils/getId";
 import CartItem from "./CartItem";
-
+/** FEEDBACK: Great job getting all tet cases to pass! */
 class ShoppingCart {
   // initially thought it should be [...CartItem]
   #cartItems = [];
