@@ -1,11 +1,10 @@
 import getId from "../utils/getId";
 
 class CartItem {
-  constructor(name, price, id) {
-    id = getId();
+  constructor(name, price) {
     this.name = name;
     this.price = price;
-    this.id = id;
+    this.id = getId();
   }
 }
 
